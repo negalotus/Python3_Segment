@@ -17,6 +17,11 @@ def list2dict(list_name):
 chapter_name_dict = list2dict(chapter_name)
 reads_dict = list2dict(reads)
 
-plt.plot([1, 2, 3])
-plt.ylabel('some numbers')
-plt.show()
+#define trans = list[i+1]/list[i]
+
+trans_rate_list = []
+
+for i in range(len(reads)-1):
+    trans_rate = reads[i+1] / reads[i]
+    trans_rate = round(trans_rate,2)
+    trans_rate_list.append(trans_rate)
